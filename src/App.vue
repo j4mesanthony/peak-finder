@@ -17,7 +17,10 @@
 
     <div v-if="test" class="row">
       <div class="col">
-        <h4>{{ myLocation }}</h4>
+        <br />
+        <h4><b>Longitude:</b> {{ longitude }}</h4>
+        <h4><b>Latitude</b>: {{ latitude }}</h4>
+        <h4><b>Accuracy</b>: {{ accuracy }}</h4>
       </div>
     </div>
   </div>
@@ -35,9 +38,9 @@ onMounted(() => {
   });
 });
 
-const myLocation = computed(() => {
-  return `Longitude: ${test.value?.longitude}, Longitude: ${test.value?.latitude} (+/-${test.value?.accuracy}m)`;
-});
+const longitude = computed(() => test.value?.longitude);
+const latitude = computed(() => test.value?.latitude);
+const accuracy = computed(() => `+/-${test.value?.accuracy}m`);
 </script>
 
 <style lang="scss">
