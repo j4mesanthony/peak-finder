@@ -43,10 +43,12 @@ onMounted(() => {
   });
 });
 
-const longitude = computed(() => coords.value?.longitude);
-const latitude = computed(() => coords.value?.latitude);
+const latitude = computed(() => parseFloat(coords.value?.latitude).toFixed(5));
+const longitude = computed(() =>
+  parseFloat(coords.value?.longitude).toFixed(5)
+);
 const accuracy = computed(
-  () => `${parseFloat(coords.value?.accuracy).toFixed(1)}m`
+  () => `${parseFloat(coords.value?.accuracy).toFixed(0)}m`
 );
 
 // function navToAreas() {

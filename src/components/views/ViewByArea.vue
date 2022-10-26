@@ -13,7 +13,7 @@
         </ul>
       </div>
       <div class="col-sm-6">
-        <div v-if="coords" class="row">
+        <div class="row">
           <div class="col">
             <br />
             <!-- CONTENT TO COME -->
