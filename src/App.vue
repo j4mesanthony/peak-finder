@@ -26,4 +26,16 @@ body {
   /* Black Blue */
   background-color: #293435;
 }
+
+.router-link-active {
+  color: #f7f9f3;
+}
+
+.nav {
+  margin-bottom: 30px;
+
+  .nav-link {
+    color: #f7f9f3;
+  }
+}
 </style>
