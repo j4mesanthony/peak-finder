@@ -1,14 +1,19 @@
 <template>
+  <PeakFinderLogo />
+  <PrimaryMenu />
   <router-view></router-view>
 </template>
 
-<script setup></script>
+<script setup>
+import PrimaryMenu from "./components/menus/PrimaryMenu.vue";
+</script>
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Aleo:wght@300&display=swap");
 
 #app {
   font-family: "Aleo", serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

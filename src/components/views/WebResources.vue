@@ -2,7 +2,7 @@
   <div class="container text-center">
     <div class="row">
       <div class="col">
-        <h4>View By Area</h4>
+        <h4>Web Resources</h4>
       </div>
     </div>
   </div>
