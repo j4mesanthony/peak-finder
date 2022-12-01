@@ -35,8 +35,8 @@ function navTo({ path }) {
   cursor: pointer;
 
   &.active {
-    background-color: $theme-light-secondaryColor;
-    color: $theme-light-primaryColor;
+    background-color: var(--background-color-secondary);
+    color: var(--text-primary-color);
   }
 }
 </style>
