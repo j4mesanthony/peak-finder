@@ -14,10 +14,15 @@
     box-sizing: border-box;
     color: var(--text-primary-color);
     position: relative;
+    user-select: none;
 }
 
 body {
     background-color: var(--background-color-primary);
+
+    button: {
+        color: var(--button-color);
+    }
 
     .router-link-active {
         color: var(--text-primary-color);

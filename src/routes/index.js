@@ -1,11 +1,11 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 
 import HomePage from "../components/views/HomePage.vue";
 import ViewByArea from "../components/views/ViewByArea.vue";
 import WebResources from "../components/views/WebResources.vue";
 
 export default createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
 
   routes: [
     {
