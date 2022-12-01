@@ -30,12 +30,13 @@ function navTo({ path }) {
 </script>
 
 <style scoped lang="scss">
+@import "../../styles/vars.scss";
 .nav-link {
   cursor: pointer;
 
   &.active {
-    background-color: #667b79;
-    color: #f7f9f3;
+    background-color: $theme-light-secondaryColor;
+    color: $theme-light-primaryColor;
   }
 }
 </style>

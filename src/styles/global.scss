@@ -1,0 +1,46 @@
+@use "sass:math";
+@import url('https://fonts.googleapis.com/css2?family=Aleo&family=Open+Sans:ital,wght@0,300;0,600;1,300&display=swap');
+@import "./vars.scss";
+
+#app {
+    font-family: 'Aleo', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    margin-top: 60px;
+}
+
+* {
+    box-sizing: border-box;
+    color: $theme-dark-backgroundColor;
+    position: relative;
+
+    &.dark-mode {
+        color: #fcfcfc;
+    }
+}
+
+body {
+    background-color: $theme-light-backgroundColor;
+
+    &.dark-mode {
+        background-color: $theme-dark-backgroundColor;
+    }
+
+    .router-link-active {
+        color: $theme-light-primaryColor;
+
+        &.dark-mode {
+            color: $theme-dark-primaryColor;
+        }
+    }
+
+    .nav {
+        margin-bottom: 30px;
+
+        .nav-link {
+            color: $theme-light-secondaryColor;
+            font-size: 16px;
+        }
+    }
+}
