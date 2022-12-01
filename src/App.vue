@@ -20,7 +20,6 @@ import { useLocalStorage } from "./composables/useLocalStorage.composable";
 const { getFromStorage, addToStorage } = useLocalStorage();
 
 // Move these constants to a consts file.
-// const 
 
 onMounted(() => {
   const storedMode = getFromStorage("display-mode");
