@@ -14,32 +14,35 @@
 
 <script setup>
 import { computed, onMounted, ref } from "vue";
-import PrimaryMenu from "./components/menus/PrimaryMenu.vue";
 import { useLocalStorage } from "./composables/useLocalStorage.composable";
+import { DISPLAY_MODES } from "./constants/displayModes.consts";
+import PrimaryMenu from "./components/menus/PrimaryMenu.vue";
 
 const { getFromStorage, addToStorage } = useLocalStorage();
 
-// Move these constants to a consts file.
-
 onMounted(() => {
-  const storedMode = getFromStorage("display-mode");
-  const currentMode = storedMode ? storedMode : "light-mode";
-  if (!storedMode) addToStorage("display-mode", currentMode);
+  const storedMode = getFromStorage(DISPLAY_MODES.modeKey);
+  const currentMode = storedMode ? storedMode : DISPLAY_MODES.light;
+  if (!storedMode) addToStorage(DISPLAY_MODES.modeKey, currentMode);
 
-  // TODO: Maybe have a consts file for multiple view modes e.g. dark/nightvision/light
   document.documentElement.className = currentMode;
   mode.value = currentMode;
 });
 
 const mode = ref(null);
 const modeIcon = computed(() => {
-  return mode.value === "light-mode" ? "dark_mode" : "light_mode";
+  return mode.value === DISPLAY_MODES.light
+    ? DISPLAY_MODES.dark
+    : DISPLAY_MODES.light;
 });
 
 function toggleMode() {
-  mode.value = mode.value === "light-mode" ? "dark-mode" : "light-mode";
+  mode.value =
+    mode.value === DISPLAY_MODES.light
+      ? DISPLAY_MODES.dark
+      : DISPLAY_MODES.light;
 
-  addToStorage("display-mode", mode.value);
+  addToStorage(DISPLAY_MODES.modeKey, mode.value);
   document.documentElement.className = mode.value;
 }
 </script>
