@@ -7,14 +7,8 @@
     {{ modeIcon }}
   </span>
 
-  <!-- <nav class="navbar bg-light">
-    <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1">Navbar</span>
-    </div>
-  </nav> -->
-
   <PeakFinderLogo />
-  <PrimaryMenu />
+  <SlideMenu />
   <router-view></router-view>
 </template>
 
@@ -22,7 +16,7 @@
 import { computed, onMounted, ref } from "vue";
 import { useLocalStorage } from "./composables/useLocalStorage.composable";
 import { DISPLAY_MODES } from "./constants/displayModes.consts";
-import PrimaryMenu from "./components/menus/PrimaryMenu.vue";
+import SlideMenu from "./components/menus/SlideMenu.vue";
 
 const { getFromStorage, addToStorage } = useLocalStorage();
 
