@@ -34,6 +34,8 @@ onMounted(() => {
     coords.value = res.coords;
   });
 });
+
+console.warn("MODE: ", process.env.VUE_APP_TEST);
 </script>
 
 <style lang="scss" scoped>
