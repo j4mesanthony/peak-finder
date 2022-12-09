@@ -45,6 +45,8 @@ function toggleMode() {
   addToStorage(DISPLAY_MODES.modeKey, mode.value);
   document.documentElement.className = mode.value;
 }
+
+console.warn("Version: ", process.env.VUE_APP_VERSION);
 </script>
 
 <style lang="scss" src="./styles/global.scss"></style>
