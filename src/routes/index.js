@@ -14,6 +14,7 @@ export default createRouter({
       component: HomePage,
       meta: {
         isRootLevel: true,
+        icon: "explore",
       },
     },
 
@@ -23,6 +24,7 @@ export default createRouter({
       component: ViewByArea,
       meta: {
         isRootLevel: true,
+        icon: "landscape",
       },
     },
 
@@ -32,6 +34,7 @@ export default createRouter({
       component: WebResources,
       meta: {
         isRootLevel: true,
+        icon: "map",
       },
     },
   ],
