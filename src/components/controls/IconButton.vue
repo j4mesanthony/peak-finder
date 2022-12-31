@@ -1,5 +1,8 @@
 <template>
-  <a>
+  <a @mouseenter="toggleToolTip(true)" @mouseleave="toggleToolTip()">
+    <span v-if="tooltip && isToolTipOn" class="tooltip-prop">{{
+      tooltip
+    }}</span>
     <span class="material-symbols-outlined" :class="{ active: props.isActive }">
       {{ props.icon }}
     </span>
@@ -7,6 +10,7 @@
 </template>
 
 <script setup>
+import { computed, ref } from "vue";
 // import { ALLOWED_ICONS } from "../../constants/allowedIcons.consts";
 
 // eslint-disable-next-line no-undef
@@ -28,6 +32,13 @@ const props = defineProps({
     default: null,
   },
 });
+
+const isToolTipOn = ref(false);
+const tooltip = computed(() => props.tooltip);
+
+function toggleToolTip(show = false) {
+  isToolTipOn.value = show;
+}
 </script>
 
 <style lang="scss" scoped>
@@ -37,6 +48,14 @@ a {
   cursor: pointer;
   height: 40px;
   padding: 5px;
+
+  .tooltip-prop {
+    font-size: 14px;
+    position: absolute;
+    top: 7px;
+    left: 36px;
+    color: var(--button-color);
+  }
 
   span {
     color: var(--accent-color);
