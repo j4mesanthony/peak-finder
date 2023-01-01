@@ -6,7 +6,7 @@ import App from "./App.vue";
 import PeakFinderLogo from "../src/assets/PeakFinderLogo.vue";
 
 // Menus
-import SlideMenu from "./components/menus/SlideMenu.vue";
+import MainNavigation from "./components/menus/MainNavigation.vue";
 
 // Controls
 import LargeButton from "./components/controls/LargeButton.vue";
@@ -16,7 +16,7 @@ const pinia = createPinia();
 
 app.component("PeakFinderLogo", PeakFinderLogo);
 app.component("LargeButton", LargeButton);
-app.component("SlideMenu", SlideMenu);
+app.component("MainNavigation", MainNavigation);
 
 app.use(router);
 app.use(pinia);
