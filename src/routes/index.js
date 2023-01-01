@@ -1,8 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
 
+// TODO: Use index file (index.views?)
 import HomePage from "../components/views/HomePage.vue";
 import ViewByArea from "../components/views/ViewByArea.vue";
 import WebResources from "../components/views/WebResources.vue";
+import ApiPlayground from "../components/views/ApiPlayground.vue";
 
 export default createRouter({
   history: createWebHistory(),
@@ -35,6 +37,16 @@ export default createRouter({
       meta: {
         isRootLevel: true,
         icon: "map",
+      },
+    },
+
+    {
+      path: "/apiPlayground",
+      name: "API",
+      component: ApiPlayground,
+      meta: {
+        isRootLevel: true,
+        icon: "cloud_download",
       },
     },
   ],
