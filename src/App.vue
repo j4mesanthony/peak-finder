@@ -8,7 +8,7 @@
   </span>
 
   <PeakFinderLogo />
-  <SlideMenu />
+  <MainNavigation />
   <router-view></router-view>
 </template>
 
@@ -16,7 +16,7 @@
 import { computed, onMounted, ref } from "vue";
 import { useLocalStorage } from "./composables/useLocalStorage.composable";
 import { DISPLAY_MODES } from "./constants/displayModes.consts";
-import SlideMenu from "./components/menus/SlideMenu.vue";
+import MainNavigation from "./components/menus/MainNavigation.vue";
 
 const { getFromStorage, addToStorage } = useLocalStorage();
 
