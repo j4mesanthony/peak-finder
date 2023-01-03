@@ -20,7 +20,8 @@
 body {
     background-color: var(--background-color-primary);
 
-    button: {
+    button {
+        background-color: var(--accent-color);
         color: var(--button-color);
     }
 
