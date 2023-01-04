@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- TODO: Refactor to bottom fixed nav -->
     <nav class="slide-menu">
       <IconButton
         v-for="(route, i) in availableRoutes"
