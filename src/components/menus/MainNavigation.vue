@@ -7,7 +7,6 @@
         :key="i"
         :isActive="currentRouteName === route.name"
         :icon="route.meta.icon"
-        :tooltip="route.name"
         @click="navTo(route)"
       />
     </nav>
@@ -35,10 +34,14 @@ function navTo({ path }) {
 @import "../../styles/vars.scss";
 
 .slide-menu {
+  background-color: var(--background-color-primary);
+  box-shadow: 0px -10px 40px -30px #000;
   position: fixed;
-  top: 5px;
-  left: 5px;
+  bottom: 0px;
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  z-index: 9;
 }
 </style>
