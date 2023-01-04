@@ -49,8 +49,7 @@ function toggleToolTip(show = false) {
 
 a {
   cursor: pointer;
-  height: 40px;
-  padding: 5px;
+  padding: 15px 5px 10px 5px;
 
   .tooltip-prop {
     font-size: 14px;
@@ -76,8 +75,10 @@ a {
 
   span {
     color: var(--accent-color);
+    font-size: 3.5rem;
 
-    &.active {
+    &.active,
+    &:hover {
       color: var(--button-color);
     }
   }

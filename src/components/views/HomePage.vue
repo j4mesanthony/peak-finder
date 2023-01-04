@@ -2,8 +2,9 @@
   <div class="container text-center">
     <div v-if="coords" class="row">
       <div class="col">
+        <h4>Your Location</h4>
+
         <br />
-        <h5><small>Your Location</small></h5>
         <h4><b>Longitude:</b> {{ longitude }}</h4>
         <h4><b>Latitude</b>: {{ latitude }}</h4>
         <h4><b>Accuracy</b>: {{ accuracy }}</h4>

@@ -4,7 +4,9 @@
       <div class="col">
         <h4>API Playground</h4>
 
-        <button @click="getStuff">Test Api</button>
+        <button @click="getStuff" type="button" class="btn btn-light">
+          Test Api
+        </button>
         <pre v-if="response">{{ response }}</pre>
       </div>
     </div>
