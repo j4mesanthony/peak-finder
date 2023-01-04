@@ -35,7 +35,7 @@ function navTo({ path }) {
 
 .slide-menu {
   background-color: var(--background-color-primary);
-  box-shadow: 0px -10px 40px -30px #000;
+  border-top: 1px solid var(--accent-color);
   position: fixed;
   bottom: 0px;
   display: flex;

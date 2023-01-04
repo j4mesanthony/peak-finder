@@ -1,9 +1,19 @@
 <template>
   <span class="material-icons" style="font-size: 70px">landscape</span>
-  <h1>Peak Finder</h1>
+  <h1 v-html="title"></h1>
 </template>
 
-<script setup></script>
+<script setup>
+import { computed } from "vue";
+
+const title = computed(() => {
+  const env = process.env.VUE_APP_ENVIRONMENT_NAME;
+  const app = "Peak Finder";
+  return env !== "Production"
+    ? `${app} : <small style="color:orange">${env}</small>`
+    : app;
+});
+</script>
 
 <style lang="scss" scoped>
 h1 {
