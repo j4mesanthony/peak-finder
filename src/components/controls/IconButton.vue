@@ -4,7 +4,11 @@
       <div class="pointer"></div>
       {{ tooltip }}</span
     >
-    <span class="material-symbols-outlined" :class="{ active: props.isActive }">
+    <span
+      class="material-symbols-outlined"
+      :class="{ active: props.isActive }"
+      :style="{ fontSize }"
+    >
       {{ props.icon }}
     </span>
   </a>
@@ -33,6 +37,11 @@ const props = defineProps({
   tooltip: {
     type: String,
     default: null,
+  },
+
+  fontSize: {
+    type: String,
+    default: "2.1rem",
   },
 });
 
@@ -75,7 +84,6 @@ a {
 
   span {
     color: var(--accent-color);
-    font-size: 3.5rem;
 
     &.active,
     &:hover {
