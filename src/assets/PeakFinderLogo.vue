@@ -9,7 +9,9 @@ import { computed } from "vue";
 const title = computed(() => {
   const env = process.env.VUE_APP_ENVIRONMENT_NAME;
   const app = "Peak Finder";
-  return env ? `${app} : <small style="color:orange">${env}</small>` : app;
+  return env
+    ? `${app} <small style="color:orange; font-size: 22px">[${env}]</small>`
+    : app;
 });
 </script>
 
